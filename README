@@ -1,0 +1,42 @@
+Expression calculator is a java parameterized expression evaluator program. Where you can evaluate a  mathematical expression  containing  variables  and constants at run time.You can pass the values to these variables at run time using hashmap where key will be the variable name and value of the hashmap corresponding to the key will be the value to that expression  variable.
+       Expression evaluator is designed  using design pattern where expression parsing and evaluation iare abstracted  each other so that it will parse the expression one time and it can evaluate any number of times. At the time of evaluation it will not parse the expression. This utility can be used in any of your application where you need to evaluate a mathematical expression.
+
+
+Expression calculator supports +,-,*,%,/,^ mathematical operators and ==,>,<,>=,<= logical operators, "=" as assignment operator and
+"(" and ")" to represent the subexpression.The expression shoud be infix form.
+
+ExpressionParser is the main class where we will set the expression and call parse method.This should be done one time for one expression.Then we can evaluate any number of times by passing new value each time in hashmap to the evaluate method of Expression class.Once we parse the expression from ExressionParser then we will get the Expression object by calling ExpressionParser "getExpression" method.
+
+usage:   
+          //Map to pass the value of the variable
+          HashMap<String,Object> datamap=new HashMap<String,Object>();
+    	  datamap.put("x", 2);//setting the value to the variable x
+    	  datamap.put("y", 3);//setting the value to the variable y
+    	  datamap.put("z", 4);//setting the value to the variable z
+
+//create a mathematical expression which contains variables and constants.
+          String expression="(2+3)*(x+y*z+32)"
+
+	    ExpressionParser ep = new ExpressionParser();
+            ep.setExpression(expression);
+            ep.parse();
+
+            Expression ex = ep.getExpression();
+            Object res = ex.evaluateExpression(test)
+
+Result is :230
+
+  example2: Logical expression:
+	     HashMap<String,Object> datamap=new HashMap<String,Object>();
+    	     datamap.put("result", 5);//setting the value to the variable x
+             String expression="result==2+3"
+	     
+Result is true
+
+
+
+
+
+
+
+I added Test.java file which show how to use the ExpressiionCalculator.
