@@ -1,0 +1,177 @@
+<project>
+	<!--The Basics -->
+	<name>Expression Calculator</name>
+	<modelVersion>4.0.0</modelVersion>
+	<version>1.0-SNAPSHOT</version>
+	<groupId>com.shanth.calculator</groupId>
+	<artifactId>calculator</artifactId>
+	<packaging>jar</packaging>
+	<url></url>
+	<organization>
+		<name>open source</name>
+		<url></url>
+	</organization>
+	<!--<inceptionYear>...</inceptionYear> <licenses>...</licenses> <contributors>...</contributors> -->
+	<developers>
+		<developer>
+			
+			<name>Shantha Kumar</name>
+			<email>shanthkumar.mysore@gmail.com</email>
+			<url>http://shanth.com</url>
+		        <timezone>-6</timezone>
+			<properties>
+				<picUrl></picUrl>
+			</properties>
+		</developer>
+	</developers>
+	<!--User Specific properties -->
+	<properties>
+
+	</properties>
+	<dependencies>
+		
+
+	</dependencies>
+	<!--These three tags are usefull when you are building multi module project 
+		and these information reside in parent pom -->
+	<!--<parent>...</parent> <dependencyManagement>...</dependencyManagement> 
+		<modules>...</modules> -->
+
+	<!-- Build Settings -->
+	<build>
+
+		<directory>${project.basedir}/target</directory>
+		<outputDirectory>${project.build.directory}/classes</outputDirectory>
+		<finalName>expcalculator</finalName>
+		<testOutputDirectory>${project.build.directory}/test-classes</testOutputDirectory>
+		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+		
+		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
+		<testResources>
+			<testResource>
+				<directory>${project.basedir}/src/test/resources</directory>
+			</testResource>
+		</testResources>
+		<pluginManagement>
+			<plugins>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>2.4.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.7</version>
+				</plugin>
+				
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ejb-plugin</artifactId>
+					<version>2.3</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.3.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.8.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-plugin-plugin</artifactId>
+					<version>2.5.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-rar-plugin</artifactId>
+					<version>2.9</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.3</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.1.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.12</version>
+				</plugin>
+				
+			</plugins>
+		</pluginManagement>
+	</build>
+
+
+	<reporting>
+		<outputDirectory>${project.build.directory}/site</outputDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>2.0.1</version>
+				<reportSets>
+					<reportSet>
+						<id>sunlink</id>
+						<reports>
+							<report>javadoc</report>
+						</reports>
+						<inherited>true</inherited>
+						<configuration>
+							<links>
+								<link>http://java.sun.com/j2se/1.5.0/docs/api/</link>
+							</links>
+						</configuration>
+					</reportSet>
+				</reportSets>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<!-- Environment Settings <issueManagement>...</issueManagement> <ciManagement>...</ciManagement> 
+		<mailingLists>...</mailingLists> <scm>...</scm> <prerequisites>...</prerequisites> -->
+
+	<repositories>
+	
+	<repository> <id>central</id> <name>Maven Repository Switchboard</name> 
+			<layout>default</layout> <url>http://repo1.maven.org/maven2</url> <snapshots> 
+			<enabled>false</enabled> </snapshots> </repository>
+	</repositories>
+
+	<!--<profiles></profiles> -->
+</project>
+	
