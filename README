@@ -7,6 +7,8 @@ Expression calculator supports +,-,*,%,/,^ mathematical operators and ==,>,<,>=,
 
 ExpressionParser is the main class where we will set the expression and call parse method.This should be done one time for one expression.Then we can evaluate any number of times by passing new value each time in hashmap to the evaluate method of Expression class.Once we parse the expression from ExressionParser then we will get the Expression object by calling ExpressionParser "getExpression" method.
 
+
+Expression Calculator is available under GPL licence.
 usage:   
           //Map to pass the value of the variable
           HashMap<String,Object> datamap=new HashMap<String,Object>();
